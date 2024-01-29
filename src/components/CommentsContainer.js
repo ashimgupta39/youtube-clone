@@ -3,7 +3,7 @@ import Comment from "./Comment";
 import { COMMENTS_API_URL } from "../utils/constants";
 
 
-const commentsData = []
+let commentsData = []
 const CommentList = ({comments})=>{
     return comments.map((comment, index)=>(
         <div key={index}>
@@ -19,6 +19,7 @@ const CommentsContainer = ({videoID})=>{
     const [commentThreads,setCommentThreads] = useState([])
 
     const makeCommentsDataList = ()=>{
+        commentsData = []
         console.log("inside make comment list")
         // console.log(commentThreads)
         commentThreads.map((comment)=>{
@@ -68,7 +69,7 @@ const CommentsContainer = ({videoID})=>{
 
     useEffect(()=>{
         getCommentThreads();
-    },[])
+    },[videoID])
     return (
         <div className="m-5 p-2">
             <h1 className="text-2xl font-bold">Comments</h1>
