@@ -32,8 +32,8 @@ export default function Head(){
 
     const getSearchQuerySuggestions = async()=>{
         // const PROXY_URL = 'https://corsproxy.io/';
-        console.log( YOUTUBE_SEARCH_API + searchQuery)
-        const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+        console.log( "/getSearchResults?q=" + searchQuery)
+        const data = await fetch("/getSearchResults?q=" + searchQuery);
         const json = await data.json()
         // console.log(json[1])
         setSuggestions(json[1])
