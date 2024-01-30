@@ -8,7 +8,10 @@ export const VIDEO_DETAILS_URL = "https://www.googleapis.com/youtube/v3/videos?p
 
 export const CHANNEL_DETAILS_URL = "https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key="+API_KEY+"&id="
 
-export const YOUTUBE_SEARCH_API = PROXY_URL+"https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+export const YOUTUBE_SEARCH_API = "https://youtube-clone-backend-tan.vercel.app/getSearchResults?q=";
+// "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+// "https://clients1.google.com/complete/search?client=youtube&gs_ri=youtube&ds=yt&q="
+
 
 export const COMMENTS_API_URL = "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet,replies&maxResults=99&key="+API_KEY+"&videoId="
 
